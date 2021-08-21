@@ -8,7 +8,8 @@
     <!-- Bootstrap CSS and JS File added  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <title>Document</title>
+    
+    <title>Apple Store</title>
 </head>
 
 <body>
@@ -30,26 +31,26 @@
                     <!-- Memory Input Part -->
                     <h5 class="mt-5">Memory</h5>
                     <section class="d-block d-lg-flex">
-                        <button type="button" class="btn btn-outline-dark">8 GB unified memory</button>
-                        <button type="button" class="btn btn-outline-dark ms-lg-1 mt-lg-0
+                        <button type="button" id="memory8GB" class="btn btn-outline-dark">8 GB unified memory</button>
+                        <button type="button" id="memory16GB" class="btn btn-outline-dark ms-lg-1 mt-lg-0
                         mt-md-0 mt-1">16 GB unified memory</button>
                     </section>
 
                     <!-- SSD Input Part -->
                     <h5 class="mt-5">Storage</h5>
                     <section class="d-block d-lg-flex">
-                        <button type="button" class="btn btn-outline-dark">256 GB SSD storage</button>
-                        <button type="button" class="btn btn-outline-dark ms-lg-1 mt-sm-0 mt-1">512 GB SSD
+                        <button type="button" id="SSD256GB" class="btn btn-outline-dark">256 GB SSD storage</button>
+                        <button type="button" id="SSD512GB" class="btn btn-outline-dark ms-lg-1 mt-sm-0 mt-1">512 GB SSD
                             storage</button>
-                        <button type="button" class="btn btn-outline-dark ms-lg-1  mt-lg-0
+                        <button type="button" id="SSD1TB" class="btn btn-outline-dark ms-lg-1  mt-lg-0
                         mt-md-0 mt-1">256 GB SSD storage</button>
                     </section>
 
                     <!-- Delivery Option Input Part -->
                     <h5 class="mt-5">Choose your delivery option</h5>
                     <section class="d-block d-lg-flex">
-                        <button type="button" class="btn btn-outline-dark">Friday, Aug 25 FREE Prime Delivery</button>
-                        <button type="button" class="btn btn-outline-dark ms-lg-1  mt-lg-0 
+                        <button type="button"  id="deliveryPrime" class="btn btn-outline-dark">Friday, Aug 25 FREE Prime Delivery</button>
+                        <button type="button"  id="deliveryRegular" class="btn btn-outline-dark ms-lg-1  mt-lg-0 
                         mt-md-0 mt-1">Friday, Aug 21 Delivery charge
                             $20</button>
                     </section>
@@ -61,7 +62,7 @@
                                 <h5 class="fw-bold">Best Price</h5>
                             </div>
                             <div class="col-8">
-                                <h5 class="fw-bold">$<span>4444</span></h5>
+                                <h5 class="fw-bold">$<span>1299</span></h5>
                             </div>
                         </section>
                         <hr class="w-75">
@@ -71,7 +72,7 @@
                                 <h5 class="fw-bold">Extra Memory Cost</h5>
                             </div>
                             <div class="col-8">
-                                <h5 class="fw-bold">$<span>4444</span></h5>
+                                <h5 class="fw-bold">$<span id="memoryBill">0</span></h5>
                             </div>
                         </section>
                         <hr class="w-75">
@@ -81,7 +82,7 @@
                                 <h5 class="fw-bold">Extra Storage Cost</h5>
                             </div>
                             <div class="col-8">
-                                <h5 class="fw-bold">$<span>4455</span></h5>
+                                <h5 class="fw-bold">$<span id="ssdBill">0</span></h5>
                             </div>
                         </section>
                         <hr class="w-75">
@@ -91,7 +92,7 @@
                                 <h5 class="fw-bold">Delivery charge</h5>
                             </div>
                             <div class="col-8">
-                                <h5 class="fw-bold">$<span>4444</span></h5>
+                                <h5 class="fw-bold">$<span id="deliveryBill">0</span></h5>
                             </div>
                         </section>
                         <hr class="w-75 " style="height: 3px;">
@@ -100,7 +101,7 @@
                                 <h5 class="fw-bold">Total Price</h5>
                             </div>
                             <div class="col-8">
-                                <h5 class="fw-bold">$<span>4444</span></h5>
+                                <h5 class="fw-bold">$<span id="totalBill">1299</span></h5>
                             </div>
                         </section>
                     </article>
@@ -108,19 +109,21 @@
                     <h5 class="mt-5">Add Promo Code</h5>
                     <section class="input-group mb-3 " style="width: 37%;">
                         <article class="d-block d-md-flex">
-                            <input type="text" class="form-control" aria-label="Username"
+                            <input type="text" class="form-control" id="promoCode" aria-label="Username"
                                 aria-describedby="basic-addon1">
-                            <button type="button" class="btn btn-danger">Apply</button>
+                            <button type="button" id="applyButton"class="btn btn-danger">Apply</button>
                         </article>
                     </section>
-                    
+
                 </section>
             </article>
         </section>
         <hr>
-        <h1 class="text-center">Total : $<span></span></h1>
+        <h1 class="text-center">Total : $<span id="promoTotalBill">1299</span></h1>
     </section>
 
+
+    <script src="index.js"></script>
 </body>
 
 </html>
