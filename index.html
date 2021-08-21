@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS and JS File added  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    
+
     <title>Apple Store</title>
 </head>
 
@@ -49,8 +49,9 @@
                     <!-- Delivery Option Input Part -->
                     <h5 class="mt-5">Choose your delivery option</h5>
                     <section class="d-block d-lg-flex">
-                        <button type="button"  id="deliveryPrime" class="btn btn-outline-dark">Friday, Aug 25 FREE Prime Delivery</button>
-                        <button type="button"  id="deliveryRegular" class="btn btn-outline-dark ms-lg-1  mt-lg-0 
+                        <button type="button" id="deliveryPrime" class="btn btn-outline-dark">Friday, Aug 25 FREE Prime
+                            Delivery</button>
+                        <button type="button" id="deliveryRegular" class="btn btn-outline-dark ms-lg-1  mt-lg-0 
                         mt-md-0 mt-1">Friday, Aug 21 Delivery charge
                             $20</button>
                     </section>
@@ -111,18 +112,23 @@
                         <article class="d-block d-md-flex">
                             <input type="text" class="form-control" id="promoCode" aria-label="Username"
                                 aria-describedby="basic-addon1">
-                            <button type="button" id="applyButton"class="btn btn-danger">Apply</button>
+                            <button type="button" id="applyButton" class="btn btn-danger">Apply</button>
                         </article>
                     </section>
-
+                    <!-- Alert Option -->
+                    <article class="alert alert-success alert alert-warning alert-dismissible fade show" role="alert" id="alert" style="display: none;">
+                        <h4 class="alert-heading">Promo Code!</h4>
+                        <p>If you have the promo code then you'll get 20% discount .</p>
+                        <hr>
+                        <p class="mb-0">Please enter the promo code correctly.</p>
+                    </article>
+                    
                 </section>
             </article>
         </section>
         <hr>
         <h1 class="text-center">Total : $<span id="promoTotalBill">1299</span></h1>
     </section>
-
-
     <script src="index.js"></script>
 </body>
 

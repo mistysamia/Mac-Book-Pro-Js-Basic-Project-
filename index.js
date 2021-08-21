@@ -1,6 +1,7 @@
 let totalBill = 1299;
 let memoryPrice = 0, ssdPrice = 0, deliveryPrice = 0, promoMatch = 0;
 
+// Memory price selection
 const memory8GB = document.getElementById('memory8GB');
 memory8GB.addEventListener('click', function () {
     memoryPrice = 0;
@@ -13,6 +14,8 @@ memory16GB.addEventListener('click', function () {
     totalBillShow();
 });
 
+
+// SSD price selection
 const SSD256GB = document.getElementById('SSD256GB');
 SSD256GB.addEventListener('click', function () {
     ssdPrice = 0;
@@ -29,6 +32,8 @@ SSD1TB.addEventListener('click', function () {
     totalBillShow();
 });
 
+
+// Delivery price selection
 const deliveryPrime = document.getElementById('deliveryPrime');
 deliveryPrime.addEventListener('click', function () {
     deliveryPrice = 0;
@@ -39,6 +44,7 @@ deliveryRegular.addEventListener('click', function () {
     deliveryPrice = 20;
     totalBillShow();
 });
+
 
 function totalBillShow() {
 
@@ -51,18 +57,32 @@ function totalBillShow() {
     totalBillAfterPromo();
 }
 
+
+// PromoCode Apply
 const applyButton = document.getElementById('applyButton');
 applyButton.addEventListener('click', function () {
     const promoCode = document.getElementById("promoCode").value;
-    if (promoCode.toLowerCase() == "stevekaku")
-        promoMatch = 0.2;
-    else
-       promoCode=0;
-    totalBillAfterPromo();
+    if (promoCode == "") {
+        document.getElementById("alert").style.display = "block";
+    }
+    else 
+    {
+        if (promoCode.toLowerCase() == "stevekaku") {
+            promoMatch = 0.2;
+            document.getElementById("alert").style.display = "none";
+        }
+        else {
+            promoMatch = 0;
+            document.getElementById("alert").style.display = "block";
+        }
+        document.getElementById("promoCode").value="";
+        totalBillAfterPromo();
+    }
+  
 });
 
 function totalBillAfterPromo() {
-    let BillAfterPromo=totalBill*promoMatch;
-    BillAfterPromo=totalBill-BillAfterPromo;
+    let BillAfterPromo = totalBill * promoMatch;
+    BillAfterPromo = totalBill - BillAfterPromo;
     document.getElementById("promoTotalBill").innerText = BillAfterPromo;
 }
